@@ -38,6 +38,18 @@ The DCGAN consists of models build using CNNs : a generator and a discriminator,
   
 ## Results
 
+| Model Name      | Loss Function | Loss vs Epochs | 
+|-----------------|---------------|---------------|
+| `dcgan-fashion-mnist-bce` | **BinaryCrossEntropy(from_logits = False)** | <img src="https://github.com/shoryasethia/GAN/blob/main/dcgan-fashion-mnist/loss-over-epochs/loss-vs-epochs/bce.png" alt="bce" width="400">| 
+| `dcgan-fashion-mnist-mse` | **MeanSquaredError()** | <img src="https://github.com/shoryasethia/GAN/blob/main/dcgan-fashion-mnist/loss-over-epochs/loss-vs-epochs/mse.png" alt="hingeloss" width="400"> | 
+| `dcgan-fashion-mnist-hingeloss` | **Hinge Loss** | <img src="https://github.com/shoryasethia/GAN/blob/main/dcgan-fashion-mnist/loss-over-epochs/loss-vs-epochs/hingeloss.png" alt="bce" width="400"> | 
+| ``dcgan-fashion-mnist-bce-before-modification`` | **BinaryCrossEntropy(from_logits = False)** | <img src="https://github.com/shoryasethia/GAN/blob/main/dcgan-fashion-mnist/loss-over-epochs/loss-vs-epoch-before-modification/bce.png" alt="bce" width="400"> | 
+| ``dcgan-fashion-mnist-mse-before-modification`` | **MeanSquaredError()** |<img src="https://github.com/shoryasethia/GAN/blob/main/dcgan-fashion-mnist/loss-over-epochs/loss-vs-epoch-before-modification/mse.png" alt="mse" width="400"> |
+| ``dcgan-fashion-mnist-hingeloss-before-modification`` |  **Hinge Loss** |<img src="https://github.com/shoryasethia/GAN/blob/main/dcgan-fashion-mnist/loss-over-epochs/loss-vs-epoch-before-modification/hingeloss.png" alt="hingeloss" width="400"> | 
+
+
+
+
 | Model Name      | Model Notebook | Model Generator | Model History | Model Evaluation (Inception Score) |
 |-----------------|----------------|-----------------|---------------|------------------------------------|
 | `dcgan-fashion-mnist-bce` | [.ipynb](https://github.com/shoryasethia/GAN/blob/main/dcgan-fashion-mnist/dcgan-fashion-mnist-bce.ipynb) [.pdf](https://github.com/shoryasethia/GAN/blob/main/dcgan-fashion-mnist/notebook-pdf-form/dcgan-fashion-mnist-bce.pdf)  | [.h5](https://github.com/shoryasethia/GAN/blob/main/dcgan-fashion-mnist/generator/generator-fashion-mnist-bce.h5) | [.pkl](https://github.com/shoryasethia/GAN/blob/main/dcgan-fashion-mnist/history/dcgan-fashion-mnist-history-loss-bce.pkl) | `1.0478562116622925 ± 0.0015827632742002606` |
