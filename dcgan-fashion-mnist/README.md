@@ -61,7 +61,7 @@ The DCGAN consists of models build using CNNs : a generator and a discriminator,
 
 | Model Name      | Loss Function | Loss vs Epochs | 
 |-----------------|---------------|---------------|
-| `dcgan-fashion-mnist-bce` | **BinaryCrossEntropy(from_logits = False)** | <img src="https://github.com/shoryasethia/GAN/blob/main/dcgan-fashion-mnist/loss-over-epochs/loss-vs-epochs/bce.png" alt="bce" width="400">| 
+| `dcgan-fashion-mnist-bce` | **BinaryCrossEntropy(from_logits = False)** | <img src="https://github.com/shoryasethia/GAN/blob/main/dcgan-fashion-mnist/loss-over-epochs/loss-vs-epochs/bceloss.png" alt="bce" width="400">| 
 | `dcgan-fashion-mnist-mse` | **MeanSquaredError()** | <img src="https://github.com/shoryasethia/GAN/blob/main/dcgan-fashion-mnist/loss-over-epochs/loss-vs-epochs/mse.png" alt="hingeloss" width="400"> | 
 | `dcgan-fashion-mnist-hingeloss` | **Hinge Loss** | <img src="https://github.com/shoryasethia/GAN/blob/main/dcgan-fashion-mnist/loss-over-epochs/loss-vs-epochs/hingeloss.png" alt="bce" width="400"> | 
 | ``dcgan-fashion-mnist-bce-before-modification`` | **BinaryCrossEntropy(from_logits = False)** | <img src="https://github.com/shoryasethia/GAN/blob/main/dcgan-fashion-mnist/loss-over-epochs/loss-vs-epoch-before-modification/bce.png" alt="bce" width="400"> | 
