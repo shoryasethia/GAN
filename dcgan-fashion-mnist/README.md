@@ -1,6 +1,6 @@
 # Deep Convolutional Generative Adversarial Network (DCGAN)
 
-This repository contains an implementation of a DCGAN trained on fashion-mnist. This is one of my assignments for Seasons of Codes [SoC'24] at IIT Bombay.
+This repository contains an implementation of a `DCGAN` trained on fashion-mnist. This is one of my [assignments](https://github.com/shoryasethia/GAN/blob/main/dcgan-fashion-mnist/is.ipynb) for Seasons of Codes [SoC'24] at IIT Bombay.
 
 ## Model Overview
 The DCGAN consists of models build using CNNs : a generator and a discriminator, trained simultaneously to generate high-quality images. The generator learns to create images that are indistinguishable from real images, while the discriminator learns to distinguish between real and generated images.
@@ -20,10 +20,31 @@ The DCGAN consists of models build using CNNs : a generator and a discriminator,
   1. The generator creates images from random noise.
   2. The discriminator evaluates the images, optimizing to correctly classify real and fake images.
   3. Loss functions () guide the optimization process.
-  > * Optimizer I used is Adam
-  > * Loss I used are BinaryCrossentropy, MeanSquaredError and HingeLoss
-  5. Training continues until the generator produces descent realistic images
+  4. Training continues until the generator produces descent realistic images
 
+#### Optimizer I used is Adam.
+  ```
+  optimizer = tf.keras.optimizers.Adam(learning_rate = 0.0001, beta_1 = 0.5 )
+  ```
+#### I used following loss functions
+**BinaryCrossentropy**
+  ```
+  cross_entropy = tf.keras.losses.BinaryCrossentropy(from_logits = False)
+  ```
+**MeanSquaredError**
+  ```
+  mse = tf.keras.losses.MeanSquaredError()
+  ```
+**HingeLoss**
+  ```
+  def discriminator_loss(real_output, fake_output):
+    real_loss = tf.reduce_mean(tf.nn.relu(1.0 - real_output))
+    fake_loss = tf.reduce_mean(tf.nn.relu(1.0 + fake_output))
+    return real_loss + fake_loss
+  
+  def generator_loss(fake_output):
+    return -tf.reduce_mean(fake_output)
+  ```
 ### Evaluation
 
 #### Inception Score
@@ -47,8 +68,7 @@ The DCGAN consists of models build using CNNs : a generator and a discriminator,
 | ``dcgan-fashion-mnist-mse-before-modification`` | **MeanSquaredError()** |<img src="https://github.com/shoryasethia/GAN/blob/main/dcgan-fashion-mnist/loss-over-epochs/loss-vs-epoch-before-modification/mse.png" alt="mse" width="400"> |
 | ``dcgan-fashion-mnist-hingeloss-before-modification`` |  **Hinge Loss** |<img src="https://github.com/shoryasethia/GAN/blob/main/dcgan-fashion-mnist/loss-over-epochs/loss-vs-epoch-before-modification/hingeloss.png" alt="hingeloss" width="400"> | 
 
-
-
+> **For following table, calculation for inception score is in [this](https://github.com/shoryasethia/GAN/blob/main/dcgan-fashion-mnist/is.ipynb) file**
 
 | Model Name      | Model Notebook | Model Generator | Model History | Model Evaluation (Inception Score) |
 |-----------------|----------------|-----------------|---------------|------------------------------------|
