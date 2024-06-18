@@ -120,7 +120,7 @@ def build_discriminator():
 
 My Conditional GAN model effectively generates MNIST-like images based on specified digit labels. This can be particularly useful for generating additional training data or for testing digit recognition models. You can find my implementation in the following repositories:
 
-- [Conditional GAN based trained MNIST model validator](https://github.com/shoryasethia/GAN/tree/main/conditional-gan-mnist)
+- [Conditional GAN based trained MNIST model validator](https://github.com/shoryasethia/C-GAN-Powered-MNIST-Validator)
 - Repo for various MNIST's digit recognition models [here](https://github.com/shoryasethia/Digit-Recognition)
 
 ### Clone Repo
