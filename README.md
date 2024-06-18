@@ -1,2 +1,3 @@
 # GAN
-Generative Adversarial Network implementation
+Diverse Generative Adversarial Network implementation
+**Building and adding more soon !!!**
