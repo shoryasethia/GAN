@@ -128,5 +128,6 @@ My Conditional GAN model effectively generates MNIST-like images based on specif
 ```
 git clone https://github.com/shoryasethia/GAN
 ```
+> * **Model was trained on `Kaggles' P100 GPU`**
 > * **If you liked anything from this repo, give it a star**
 > * **Author : [@shoryasethia](https://github.com/shoryasethia/)**
